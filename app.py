@@ -1,5 +1,7 @@
 import streamlit as st
+from latex2sympy2 import latex2sympy
 from PIL import Image
+from sympy import *
 
 from math_recognizer import MathRecognizer
 
@@ -7,8 +9,8 @@ from math_recognizer import MathRecognizer
 math_recognizer = MathRecognizer()
 
 # Streamlit app layout
-st.title("Arithmetic Operations Scanner")
-st.write("Upload an image containing arithmetic operations to get the result.")
+st.title("Math Operations Scanner")
+st.write("Upload an image containing operations to get the result.")
 
 # Upload image
 uploaded_file = st.file_uploader("Choose an image...", type=["png", "jpg", "jpeg"])
@@ -25,15 +27,12 @@ if uploaded_file is not None:
     # Display recognized text
     st.write(f"Recognized Operation: **{operation_text}**")
 
-    # Clean up the recognized operation text
-    clean_operation = math_recognizer.clean_operation(operation_text)
-
-    # Display the cleaned operation in LaTeX
-    st.latex(clean_operation)
+    # Display the Sympy operation
+    st.latex(latex2sympy(operation_text))
 
     # Calculate the result
     try:
-        result = eval(clean_operation)
+        result = N(latex2sympy(operation_text))
         st.write(f"Result: **{result}**")
     except Exception as e:
         st.write(f"Error in calculation: **{str(e)}**")
