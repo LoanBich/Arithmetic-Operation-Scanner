@@ -1,8 +1,8 @@
-# Math Operations Scanner
+# AI Math Calculator
 
 ## Introduction
 
-Math Operations Scanner is a web application that allows users to upload images containing operations. The app utilizes advanced machine learning techniques to recognize mathematical expressions from images and computes the results automatically using the Mathematical Formula Recognition (MFR) model from [Pix2Text (P2T)](https://huggingface.co/breezedeus/pix2text-mfr).
+AI Math Calculator is a web application that allows users to upload images containing operations. The app utilizes advanced machine learning techniques to recognize mathematical expressions from images and computes the results automatically using the Mathematical Formula Recognition (MFR) model from [Pix2Text (P2T)](https://huggingface.co/breezedeus/pix2text-mfr).
 
 ![App Screenshot](./images/AppScreenshot.png)
 

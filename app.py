@@ -9,7 +9,7 @@ from math_recognizer import MathRecognizer
 math_recognizer = MathRecognizer()
 
 # Streamlit app layout
-st.title("Math Operations Scanner")
+st.title("AI Math Calculator")
 st.write("Upload an image containing operations to get the result.")
 
 # Upload image
