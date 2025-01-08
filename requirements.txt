@@ -1,0 +1,6 @@
+streamlit
+latex2sympy2
+pillow
+sympy
+transformers
+optimum
